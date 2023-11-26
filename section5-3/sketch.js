@@ -27,7 +27,22 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  return (y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0);
 }
+ 
+if(daysInYear(2023)){
+  console.log(366);
+}
+else{
+  console.log(365)
+}
+
+
+
+
+
+
+
 
 function daysInMonth(y, m){
   if(m == 2){
@@ -51,6 +66,7 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
+  if();
 }
 
 function dayOfWeekAsString(dow){
