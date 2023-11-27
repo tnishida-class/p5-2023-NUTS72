@@ -66,7 +66,6 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
-  if();
 }
 
 function dayOfWeekAsString(dow){

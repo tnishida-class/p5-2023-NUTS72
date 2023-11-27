@@ -226,7 +226,20 @@ function draw(){
    }else if(a == 16 && keyIsDown(SHIFT)){
       n = 16;   
    }
-  }else if(n == 16){ //終了画面
+  }else if(n==16){
+    if(a==16){ //(17)フィリピン
+      Philippine();
+     if(keyIsDown(UP_ARROW)){
+       correct();
+       a = 17;
+     }else if(keyIsDown(LEFT_ARROW)||keyIsDown(DOWN_ARROW)||keyIsDown(RIGHT_ARROW)) {
+       incorrect();
+       a = 17
+     }
+   }else if(a == 17 && keyIsDown(SHIFT)){
+      n = 17;   
+   }
+  }else if(n == 17){ //終了画面
     background(234);
     fill(0);
     textSize(80);
@@ -303,13 +316,13 @@ function Myanmar(){
   background(234);
   noStroke();
   fill(255, 210, 31);
-  rect(0, 0, 450, 100); 
+  rect(cx - 225, 0, 450, 100); 
   fill(67, 191, 33);
-  rect(0, 100, 450, 100);
+  rect(cx - 225, 100, 450, 100);
   fill(242, 30, 2);
-  rect(0, 200, 450, 100);
+  rect(cx - 225, 200, 450, 100);
   fill(255);
-  star(225, 157, 115);
+  star(cx, 157, 115);
 
   quiz();
   textSize(30);
@@ -321,9 +334,9 @@ function Ukraine(){
   background(234);
   noStroke();
   fill(19, 95, 209);
-  rect(0, 0, 450, 225);
+  rect(cx - 225, 0, 450, 225);
   fill(252, 221, 18);
-  rect(0, 150, 450, 150);
+  rect(cx - 225, 150, 450, 150);
 
   quiz();
   textSize(30);
@@ -335,11 +348,11 @@ function Austria(){
   background(234);
   noStroke();
   fill(189, 19, 39);
-  rect(0, 0, 450, 100); 
+  rect(cx - 225, 0, 450, 100); 
   fill(255);
-  rect(0, 100, 450, 100);
+  rect(cx - 225, 100, 450, 100);
   fill(189, 19, 39);
-  rect(0, 200, 450, 100);
+  rect(cx - 225, 200, 450, 100);
 
   quiz();
   textSize(30);
@@ -351,11 +364,11 @@ function Czech(){
   background(234);
   noStroke();
   fill(255);
-  rect(0, 0, 450, 225);
+  rect(cx - 225, 0, 450, 225);
   fill(217, 9, 9);
-  rect(0, 150, 450, 150); 
+  rect(cx - 225, 150, 450, 150); 
   fill(15, 74, 140);
-  triangle(0, 0, 0, 300, 225, 150);
+  triangle(cx - 225, 0, cx - 225, 300, cx, 150);
 
   quiz();
   textSize(30);
@@ -367,11 +380,11 @@ function Sierraleone(){
   background(234);
   noStroke();
   fill(30, 181, 58);
-  rect(0, 0, 450, 300);
+  rect(cx - 225, 0, 450, 300);
   fill(255);
-  rect(0, 100, 450, 100);
+  rect(cx - 225, 100, 450, 100);
   fill(0, 114, 198);
-  rect(0, 200, 450, 100); 
+  rect(cx - 225, 200, 450, 100); 
 
   quiz();
   textSize(30);
@@ -383,13 +396,13 @@ function Suriname(){
   background(234);
   noStroke();
   fill(1, 128, 54);
-  rect(0, 0, 450, 300); 
+  rect(cx - 225, 0, 450, 300); 
   fill(255);
-  rect(0, 60, 450, 180);
+  rect(cx - 225, 60, 450, 180);
   fill(168, 13, 29)
-  rect(0, 90, 450, 120)
+  rect(cx - 225, 90, 450, 120)
   fill(247, 211, 32);
-  star(225, 155, 59);
+  star(cx, 155, 59);
 
   quiz();
   textSize(30);
@@ -401,11 +414,11 @@ function BurkinaFaso(){
   background(234);
   noStroke();
   fill(239, 43, 45);
-  rect(0, 0, 450, 150); 
+  rect(cx - 225, 0, 450, 150); 
   fill(0, 158, 73);
-  rect(0, 150, 450, 150);
+  rect(cx - 225, 150, 450, 150);
   fill(252, 209, 22);
-  star(225, 150, 57);
+  star(cx, 150, 57);
 
   quiz();
   textSize(30);
@@ -417,13 +430,13 @@ function Chile(){
   background(234);
   noStroke();
   fill(255);
-  rect(0, 0, 450, 150); 
+  rect(cx - 225, 0, 450, 150); 
   fill(0, 57, 166);
-  rect(0, 0, 150, 150);
+  rect(cx - 225, 0, 150, 150);
   fill(255);
-  star(75, 75, 37);
+  star(cx - 150, 75, 37);
   fill(215, 43, 31)
-  rect(0, 150, 450, 150)
+  rect(cx - 225, 150, 450, 150)
 
   quiz();
   textSize(30);
@@ -435,17 +448,17 @@ function CentralAfrica(){
   background(234);
   noStroke();
   fill(0, 48, 130);
-  rect(0, 0, 450, 75); 
+  rect(cx - 225, 0, 450, 75); 
   fill(255);
-  rect(0, 75, 450, 75);
+  rect(cx - 225, 75, 450, 75);
   fill(40, 151, 40)
-  rect(0, 150, 450, 75)
+  rect(cx - 225, 150, 450, 75)
   fill(255, 206, 0)
-  rect(0, 225, 450, 75) 
+  rect(cx - 225, 225, 450, 75) 
   fill(210, 16, 52)
-  rect(180, 0, 80, 300) 
+  rect(cx - 45, 0, 80, 300) 
   fill(255, 206, 0);
-  star(75, 40, 35);
+  star(cx - 150, 40, 35);
 
   quiz();
   textSize(30);
@@ -457,9 +470,9 @@ function Somalia(){
   background(234);
   noStroke();
   fill(65, 137, 221);
-  rect(0, 0, 450, 300); 
+  rect(cx - 225, 0, 450, 300); 
   fill(255);
-  star(225, 150, 70);
+  star(cx, 150, 70);
 
   quiz();
   textSize(30);
@@ -471,13 +484,24 @@ function Türkiye(){
   background(234);
   noStroke();
   fill(227, 10, 23);
-  rect(0, 0, 450, 300); 
+  rect(cx - 225, 0, 450, 300); 
   fill(255)
-  circle(150, 150, 154)
+  circle(cx - 75, 150, 154)
   fill(227, 10, 23)
-  circle(168, 150, 124)
+  circle(cx - 57, 150, 124)
   fill(255);
-  star(249, 150, 39);
+  tstar(cx + 24, 150, 39);
+
+  function tstar(cx, cy, r){ 
+    beginShape(); 
+      for (let i = 0; i < 5; i++){
+        let theta = TWO_PI * i * 2 / 5 - 0.64;
+        let x = cx + cos(theta) * r;
+        let y = cy + sin(theta) * r;
+        vertex(x,y);
+      }
+      endShape(CLOSE);
+      }
 
   quiz();
   textSize(30);
@@ -489,15 +513,15 @@ function NorthKorea(){
   background(234);
   noStroke();
   fill(2, 79, 162);
-  rect(0, 0, 450, 225);
+  rect(cx - 225, 0, 450, 225);
   fill(255);
-  rect(0, 37.5, 450, 150);
+  rect(cx - 225, 37.5, 450, 150);
   fill(237, 28, 39);
-  rect(0, 43.75, 450, 137.5); 
+  rect(cx - 225, 43.75, 450, 137.5); 
   fill(255)
-  circle(150, 112.5, 100)
+  circle(cx - 75, 112.5, 100)
   fill(237, 28, 39);
-  star(150, 112.5, 48.4375);
+  star(cx - 75, 112.5, 48.4375);
 
   quiz();
   textSize(30);
@@ -509,21 +533,21 @@ function Honduras(){
   background(234);
   noStroke();
   fill(53, 157, 222);
-  rect(0, 0, 450, 75); 
+  rect(cx - 225, 0, 450, 75); 
   fill(255);
-  rect(0, 75, 450, 75);
+  rect(cx - 225, 75, 450, 75);
   fill(53, 157, 222);
-  rect(0, 150, 450, 75);
+  rect(cx - 225, 150, 450, 75);
   fill(53, 157, 222);
-  star(225, 112.5, 13);
+  star(cx, 112.5, 13);
   fill(53, 157, 222);
-  star(175, 94, 13);
+  star(cx - 50, 94, 13);
   fill(53, 157, 222);
-  star(175, 131, 13);
+  star(cx - 50, 131, 13);
   fill(53, 157, 222);
-  star(275, 94, 13);
+  star(cx + 50, 94, 13);
   fill(53, 157, 222);
-  star(275, 131, 13);
+  star(cx + 50, 131, 13);
 
   quiz();
   textSize(30);
@@ -535,13 +559,13 @@ function Norway(){
   background(234);
   noStroke();
   fill(239,43,45)
-  rect(0,0,450,300)
+  rect(cx - 225,0,450,300)
   fill(255)
-  rect(120,0,60,300)
-  rect(0,120,450,60)
+  rect(cx - 105,0,60,300)
+  rect(cx - 225,120,450,60)
   fill(0,40,104)
-  rect(135,0,30,300)
-  rect(0,135,450,30)
+  rect(cx - 90,0,30,300)
+  rect(cx - 225,135,450,30)
 
   quiz();
   textSize(30);
@@ -553,13 +577,13 @@ function Iceland(){
   background(234);
   noStroke();
   fill(2,83,156)
-  rect(0,0,450,300)
+  rect(cx - 225,0,450,300)
   fill(255)
-  rect(120,0,60,300)
-  rect(0,120,450,60)
+  rect(cx - 105,0,60,300)
+  rect(cx - 225,120,450,60)
   fill(220,30,53)
-  rect(135,0,30,300)
-  rect(0,135,450,30)
+  rect(cx - 90,0,30,300)
+  rect(cx - 225,135,450,30)
 
   quiz();
   textSize(30);
@@ -571,17 +595,17 @@ function Azerbaijan(){
   background(234);
   noStroke();
   fill(0,186,229)
-  rect(0,0,450,100)
+  rect(cx - 225,0,450,100)
   fill(238,36,54)
-  rect(0,100,450,100)
+  rect(cx - 225,100,450,100)
   fill(61,157,50)
-  rect(0,200,450,100)
+  rect(cx - 225,200,450,100)
   fill(255)
-  circle(215,150,95)
+  circle(cx - 10,150,95)
   fill(238,36,54)
-  circle(225,150,80)
+  circle(cx,150,80)
   fill(255)
-  eightstar(265,150,25)
+  eightstar(cx + 40,150,25)
 
   function eightstar(cx, cy, r){
     beginShape();
@@ -597,4 +621,90 @@ function Azerbaijan(){
   quiz();
   textSize(30);
   option("リビア(↑)", "トルコ(←)", "アゼルバイジャン(↓)", "ウズベキスタン(→)");
+}
+
+//(17)フィリピンa
+function Philippine(){
+  background(234);
+  noStroke();
+  fill(0,56,168)
+  rect(cx - 225,0,450,112)
+  fill(206,17,38)
+  rect(cx - 225,112,450,112)
+  fill(255)
+  triangle(cx - 225,0,cx - 225,224,cx - 18,112)
+  fill(252,209,22)
+  philippinestar(cx - 52,112,12,0)
+  philippinestar(cx - 212,27,12,0.85)
+  philippinestar(cx - 212,198,12,0.35)
+    
+  let b = 65
+  triangle(b+cx-225,112,b+cx-233,65,b+cx-217,65)
+  triangle(b+cx-225,58,b+cx-233,65,b+cx-217,65)
+  
+  triangle(b+cx-225,112,b+cx-233,159,b+cx-217,159)
+  triangle(b+cx-225,166,b+cx-233,159,b+cx-217,159)
+  
+  triangle(b+cx-225,112,cx-113,104,cx-113,120)
+  triangle(cx-106,112,cx-113,104,cx-113,120)
+  
+  triangle(b+cx-225,112,cx-207,104,cx-207,120)
+  triangle(cx-214,112,cx-207,104,cx-207,120)
+  
+  triangle(b+cx-225,112,b+33-5.5+cx-225,112-33-5.5,b+33+5.5+cx-225,112-33+5.5)
+  triangle(b+cx-188,112-37,b+33-5.5+cx-225,112-33-5.5,b+33+5.5+cx-225,112-33+5.5)
+  
+  triangle(b+cx-225,112,b+33-5.5+cx-225,112+33+5.5,b+33+5.5+cx-225,112+33-5.5)
+  triangle(b+37+cx-225,112+37,b+33-5.5+cx-225,112+33+5.5,b+33+5.5+cx-225,112+33-5.5)
+  
+  triangle(b+cx-225,112,b-33+5.5+cx-225,112-33-5.5,b-33-5.5+cx-225,112-33+5.5)
+  triangle(b-37+cx-225,112-37,b-33+5.5+cx-225,112-33-5.5,b-33-5.5+cx-225,112-33+5.5)
+  
+  triangle(b+cx-225,112,b-33+5.5+cx-225,112+33+5.5,b-33-5.5+cx-225,112+33-5.5)
+  triangle(b-37+cx-225,112+37,b-33+5.5+cx-225,112+33+5.5,b-33-5.5+cx-225,112+33-5.5)
+  
+  fill(255)
+  triangle(b+cx-225,112,b-7+cx-225,50,b-4+cx-225,50)
+  triangle(b+cx-225,112,b+7+cx-225,50,b+4+cx-225,50)
+  
+  triangle(b+cx-225,112,b-7+cx-225,175,b-4+cx-225,175)
+  triangle(b+cx-225,112,b+7+cx-225,175,b+4+cx-225,175)
+  
+  triangle(b+cx-225,112,120+cx-225,112-6,120+cx-225,112-3)
+  triangle(b+cx-225,112,120+cx-225,112+6,120+cx-225,112+3)
+  
+  triangle(b+cx-225,112,10+cx-225,112-6,10+cx-225,112-3)
+  triangle(b+cx-225,112,10+cx-225,112+6,10+cx-225,112+3)
+  
+  triangle(b+cx-225,112,b+33+3+cx-225,112-33-4-3,b+33+cx-225,112-33-7)
+  triangle(b+cx-225,112,b+33+4+3+cx-225,112-33-3,b+33+7+cx-225,112-33)
+  
+  triangle(b+cx-225,112,b+33+3+cx-225,112+33+4+3,b+33+cx-225,112+33+7)
+  triangle(b+cx-225,112,b+33+4+3+cx-225,112+33+3,b+33+7+cx-225,112+33)
+  
+  triangle(b+cx-225,112,b-33-3+cx-225,112+33+4+3,b-33+cx-225,112+33+7)
+  triangle(b+cx-225,112,b-33-4-3+cx-225,112+33+3,b-33-7+cx-225,112+33)
+  
+  triangle(b+cx-225,112,b-33-3+cx-225,112-33-4-3,b-33+cx-225,112-33-7)
+  triangle(b+cx-225,112,b-33-4-3+cx-225,112-33-3,b-33-7+cx-225,112-33)
+  
+  fill(252,209,22)
+  circle(b+cx-225,112,55)
+  
+    
+  function philippinestar(cx,cy,r,a){
+      beginShape();
+      for(let i = 0; i < 5; i++){
+        let theta = TWO_PI * i * 2/5 - a;
+        let x = cx + cos(theta) * r;
+        let y = cy + sin(theta) * r;
+        vertex(x,y);
+      }
+    endShape(CLOSE)
+  }
+
+
+quiz();
+textSize(30);
+option("フィリピン(↑)","チェコ(←)", "キューバ(↓)", "ジブチ(→)");
 }
