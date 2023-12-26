@@ -1,6 +1,5 @@
 let cx, cy, n, a, ra; //グローバル変数として定義 cx,cy=画面の中心,n=(n+1)問目, a=制御のための変数, ra = right answer
 let s, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17;
-s = s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12+s13+s14+s15+s16+s17; //正解数カウント
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -321,7 +320,8 @@ function draw(){
 
     textSize(15); 
     text("スペースキーでもう一度挑戦！", cx, cy * 6 / 5);
-
+    
+    s = s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12+s13+s14+s15+s16+s17; //正解数カウント
     textSize(40);
     text("正解数：" + s + "/17問", cx, cy + 150);
 
