@@ -334,7 +334,7 @@ function draw(){
     }else if(s == 16){
       comment("惜しい！すごい！");
     }else if(s == 17){
-      comment("全問正解！参りました…");
+      comment("全問正解！国旗博士だ！");
     }
     
     if(keyIsDown(" ".charCodeAt(0))){ //1問目に戻る
