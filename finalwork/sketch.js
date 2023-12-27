@@ -13,7 +13,7 @@ function setup(){
   // タイトル
   fill(0);
   textSize(40);
-  text("難問！", cx, cy - 60);
+  text("難問！?", cx, cy - 60);
   textSize(80);
   text("国旗クイズ", cx, cy);
   textSize(40);
