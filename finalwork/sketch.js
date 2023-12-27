@@ -9,7 +9,6 @@ function setup(){
   cx = windowWidth / 2;
   cy = windowHeight / 2;
   n = 0;
-  a = 0;
 
   // タイトル
   fill(0);
@@ -25,8 +24,9 @@ function setup(){
  
 function draw(){
   if(n == 0){ //(1)ミャンマーa
-    if(a == 0 && keyIsDown(" ".charCodeAt(0))){
+    if(a !== 1 && keyIsDown(" ".charCodeAt(0))){
       Myanmar();
+      a = 0;
     }else if(a == 0 && keyIsDown(UP_ARROW)){
       correct();
       a = 1;
@@ -35,7 +35,7 @@ function draw(){
       incorrect();
       a = 1;
       s1 = 0;
-    }else if(keyIsDown(" ".charCodeAt(0))){
+    }else if(a == 1 && keyIsDown(" ".charCodeAt(0))){
       option();
     }else if(a == 1 && keyIsDown(SHIFT)){
       n = 1;
