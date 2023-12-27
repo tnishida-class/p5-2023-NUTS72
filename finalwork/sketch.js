@@ -12,13 +12,13 @@ function setup(){
 
   // タイトル
   fill(0);
-  textSize(20);
-  text("難問！", cx, cy - 40);
-  textSize(50);
+  textSize(40);
+  text("難問！", cx, cy - 60);
+  textSize(80);
   text("国旗クイズ", cx, cy);
-  textSize(20);
-  text("（全17問）", cx, cy + 40);
-  textSize(15);
+  textSize(40);
+  text("（全17問）", cx, cy + 70);
+  textSize(25);
   text("スペースキーを押してスタート！", cx, cy * 7 / 5);
 }
  
