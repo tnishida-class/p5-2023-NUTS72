@@ -332,9 +332,9 @@ function draw(){
     }else if(s > 10 && s < 16){
       comment("マニアだね！");
     }else if(s == 16){
-      comment("惜しい！すごい！");
+      comment("惜しい！もう一度挑戦だ！");
     }else if(s == 17){
-      comment("全問正解！国旗博士だ！");
+      comment("全問正解！国旗博士！？");
     }
     
     if(keyIsDown(" ".charCodeAt(0))){ //1問目に戻る
